@@ -30,9 +30,9 @@ need to change the relative path.
 ### Run the collector
 
 Note: at the moment, you need `opentelemetry-ebpf-profiler` pulled, and on the
-`collector-receiver` branch for this to run.
+`otel-receiver` branch for this to run.
 
 ```
 cd collector
-go run components.go main.go main_others.go main_windows.go --config ../config.yaml
+go run components.go main.go main_others.go --config ../config.yaml
 ```
