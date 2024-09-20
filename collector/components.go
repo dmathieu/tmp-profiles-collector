@@ -37,7 +37,7 @@ func components() (otelcol.Factories, error) {
 	}
 	factories.ReceiverModules = make(map[component.Type]string, len(factories.Receivers))
 	factories.ReceiverModules[otlpreceiver.NewFactory().Type()] = "go.opentelemetry.io/collector/receiver/otlpreceiver v0.109.0"
-	factories.ReceiverModules[profilesreceiver.NewFactory().Type()] = "github.com/open-telemetry/opentelemetry-ebpf-profiler v0.0.0-20240918090752-0a8979a41728"
+	factories.ReceiverModules[profilesreceiver.NewFactory().Type()] = "github.com/open-telemetry/opentelemetry-ebpf-profiler v0.0.0-20240920083209-c94900d22714"
 
 	factories.Exporters, err = exporter.MakeFactoryMap(
 		debugexporter.NewFactory(),

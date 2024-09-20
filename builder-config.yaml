@@ -18,6 +18,6 @@ receivers:
   - gomod:
       go.opentelemetry.io/collector/receiver/otlpreceiver v0.109.0
   - gomod:
-      github.com/open-telemetry/opentelemetry-ebpf-profiler v0.0.0-20240918090752-0a8979a41728
+      github.com/open-telemetry/opentelemetry-ebpf-profiler v0.0.0-20240920083209-c94900d22714
     import: github.com/open-telemetry/opentelemetry-ebpf-profiler/collector
     name: profilesreceiver
