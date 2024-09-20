@@ -27,6 +27,14 @@ replace github.com/open-telemetry/opentelemetry-ebpf-profiler => ../../../open-t
 This change assumes your local path respects GOPATH. If it doesn't, you will
 need to change the relative path.
 
+### Updating the version in `builder-config.yaml`
+
+If you want to build the collector from a remote branch, replace the ebpf profiler version 
+with the version you get from (example for branch `otel-receiver`):
+```
+go list -m -json github.com/open-telemetry/opentelemetry-ebpf-profiler@otel-receiver | jq '.|.Version' | tr -d '"'
+```
+
 ### Run the collector
 
 Note: at the moment, you need `opentelemetry-ebpf-profiler` pulled, and on the
