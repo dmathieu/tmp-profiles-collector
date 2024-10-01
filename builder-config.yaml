@@ -7,6 +7,8 @@ dist:
 exporters:
   - gomod:
       go.opentelemetry.io/collector/exporter/debugexporter v0.109.0
+  - gomod: github.com/dmathieu/tmp-profiles-collector/stdoutexporter v0.0.1
+    path: ./stdoutexporter
   - gomod:
       go.opentelemetry.io/collector/exporter/otlpexporter v0.109.0
 

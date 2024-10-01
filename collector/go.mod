@@ -5,10 +5,10 @@ module go.opentelemetry.io/collector/cmd/builder
 go 1.23.1
 
 require (
+	github.com/dmathieu/tmp-profiles-collector/stdoutexporter v0.0.1
 	github.com/open-telemetry/opentelemetry-ebpf-profiler v0.0.0-20240920083209-c94900d22714
 	go.opentelemetry.io/collector/component v0.109.0
 	go.opentelemetry.io/collector/confmap v1.15.0
-	go.opentelemetry.io/collector/confmap/converter/expandconverter v0.109.0
 	go.opentelemetry.io/collector/confmap/provider/envprovider v0.109.0
 	go.opentelemetry.io/collector/confmap/provider/fileprovider v0.109.0
 	go.opentelemetry.io/collector/confmap/provider/httpprovider v0.109.0
@@ -107,7 +107,7 @@ require (
 	go.opentelemetry.io/collector/extension/extensioncapabilities v0.109.0 // indirect
 	go.opentelemetry.io/collector/featuregate v1.15.0 // indirect
 	go.opentelemetry.io/collector/internal/globalgates v0.109.0 // indirect
-	go.opentelemetry.io/collector/pdata v1.15.0 // indirect
+	go.opentelemetry.io/collector/pdata v1.16.0 // indirect
 	go.opentelemetry.io/collector/pdata/pprofile v0.109.0 // indirect
 	go.opentelemetry.io/collector/pdata/testdata v0.109.0 // indirect
 	go.opentelemetry.io/collector/processor/processorprofiles v0.109.0 // indirect
@@ -151,4 +151,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/open-telemetry/opentelemetry-ebpf-profiler => ../../../open-telemetry/opentelemetry-ebpf-profiler
+replace github.com/dmathieu/tmp-profiles-collector/stdoutexporter v0.0.1 => ../stdoutexporter

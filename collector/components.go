@@ -11,6 +11,7 @@ import (
 	"go.opentelemetry.io/collector/processor"
 	"go.opentelemetry.io/collector/receiver"
 	debugexporter "go.opentelemetry.io/collector/exporter/debugexporter"
+	stdoutexporter "github.com/dmathieu/tmp-profiles-collector/stdoutexporter"
 	otlpexporter "go.opentelemetry.io/collector/exporter/otlpexporter"
 	batchprocessor "go.opentelemetry.io/collector/processor/batchprocessor"
 	otlpreceiver "go.opentelemetry.io/collector/receiver/otlpreceiver"
@@ -41,6 +42,7 @@ func components() (otelcol.Factories, error) {
 
 	factories.Exporters, err = exporter.MakeFactoryMap(
 		debugexporter.NewFactory(),
+		stdoutexporter.NewFactory(),
 		otlpexporter.NewFactory(),
 	)
 	if err != nil {
@@ -48,6 +50,7 @@ func components() (otelcol.Factories, error) {
 	}
 	factories.ExporterModules = make(map[component.Type]string, len(factories.Exporters))
 	factories.ExporterModules[debugexporter.NewFactory().Type()] = "go.opentelemetry.io/collector/exporter/debugexporter v0.109.0"
+	factories.ExporterModules[stdoutexporter.NewFactory().Type()] = "github.com/dmathieu/tmp-profiles-collector/stdoutexporter v0.0.1"
 	factories.ExporterModules[otlpexporter.NewFactory().Type()] = "go.opentelemetry.io/collector/exporter/otlpexporter v0.109.0"
 
 	factories.Processors, err = processor.MakeFactoryMap(
