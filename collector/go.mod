@@ -6,7 +6,6 @@ go 1.23.1
 
 require (
 	github.com/dmathieu/tmp-profiles-collector/stdoutexporter v0.0.1
-	github.com/open-telemetry/opentelemetry-ebpf-profiler v0.0.0-20240920083209-c94900d22714
 	go.opentelemetry.io/collector/component v0.109.0
 	go.opentelemetry.io/collector/confmap v1.15.0
 	go.opentelemetry.io/collector/confmap/provider/envprovider v0.109.0
@@ -24,6 +23,7 @@ require (
 	go.opentelemetry.io/collector/processor/batchprocessor v0.109.0
 	go.opentelemetry.io/collector/receiver v0.109.0
 	go.opentelemetry.io/collector/receiver/otlpreceiver v0.109.0
+	go.opentelemetry.io/ebpf-profiler v0.0.1
 	golang.org/x/sys v0.25.0
 )
 
@@ -52,7 +52,7 @@ require (
 	github.com/jsimonetti/rtnetlink v1.4.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.17.9 // indirect
-	github.com/klauspost/cpuid/v2 v2.2.3 // indirect
+	github.com/klauspost/cpuid/v2 v2.2.8 // indirect
 	github.com/knadh/koanf/maps v0.1.1 // indirect
 	github.com/knadh/koanf/providers/confmap v0.1.0 // indirect
 	github.com/knadh/koanf/v2 v2.1.1 // indirect
@@ -150,5 +150,7 @@ require (
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace go.opentelemetry.io/ebpf-profiler v0.0.1 => ../../../open-telemetry/opentelemetry-ebpf-profiler
 
 replace github.com/dmathieu/tmp-profiles-collector/stdoutexporter v0.0.1 => ../stdoutexporter

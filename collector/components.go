@@ -15,7 +15,7 @@ import (
 	otlpexporter "go.opentelemetry.io/collector/exporter/otlpexporter"
 	batchprocessor "go.opentelemetry.io/collector/processor/batchprocessor"
 	otlpreceiver "go.opentelemetry.io/collector/receiver/otlpreceiver"
-	profilesreceiver "github.com/open-telemetry/opentelemetry-ebpf-profiler/collector"
+	profilesreceiver "go.opentelemetry.io/ebpf-profiler/collector"
 )
 
 func components() (otelcol.Factories, error) {
@@ -38,7 +38,7 @@ func components() (otelcol.Factories, error) {
 	}
 	factories.ReceiverModules = make(map[component.Type]string, len(factories.Receivers))
 	factories.ReceiverModules[otlpreceiver.NewFactory().Type()] = "go.opentelemetry.io/collector/receiver/otlpreceiver v0.109.0"
-	factories.ReceiverModules[profilesreceiver.NewFactory().Type()] = "github.com/open-telemetry/opentelemetry-ebpf-profiler v0.0.0-20240920083209-c94900d22714"
+	factories.ReceiverModules[profilesreceiver.NewFactory().Type()] = "go.opentelemetry.io/ebpf-profiler v0.0.1"
 
 	factories.Exporters, err = exporter.MakeFactoryMap(
 		debugexporter.NewFactory(),
