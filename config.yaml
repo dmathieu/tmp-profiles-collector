@@ -1,5 +1,6 @@
 receivers:
   otelreceiver:
+    SamplesPerSecond: 100
 
 exporters:
   debug:
