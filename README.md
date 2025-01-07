@@ -21,7 +21,7 @@ Build a static version of the collector with glibc
 If you want to build the collector from a remote branch, replace the ebpf profiler version
 with the version you get from (example for branch `otel-receiver`):
 ```
-go list -m -json github.com/open-telemetry/opentelemetry-ebpf-profiler@otel-receiver | jq '.|.Version' | tr -d '"'
+go list -m -json github.com/dmathieu/opentelemetry-ebpf-profiler@collector-receiver | jq '.|.Version' | tr -d '"'
 ```
 
 ### Run the collector
