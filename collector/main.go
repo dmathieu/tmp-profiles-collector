@@ -20,7 +20,7 @@ func main() {
 	info := component.BuildInfo{
 		Command:     "profiling-collector",
 		Description: "Profiling OTel Collector distribution",
-		Version:     "1.0.0",
+		Version:     "",
 	}
 
 	set := otelcol.CollectorSettings{

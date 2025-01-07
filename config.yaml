@@ -1,20 +1,15 @@
 receivers:
-  otelreceiver: # this line represents the ID of your receiver
-    project-id: '123'
-    collection-agent: 127.0.0.1:11000
-    verbose: true
-    disable-tls: true
-    secret-token: abc123
+  otelreceiver:
 
 exporters:
-  stdout:
+  debug:
 
 service:
   pipelines:
     profiles:
       receivers: [ otelreceiver ]
       processors: [ ]
-      exporters: [ stdout ]
+      exporters: [ debug ]
   telemetry:
     logs:
       level: debug
