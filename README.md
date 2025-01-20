@@ -26,10 +26,10 @@ go list -m -json github.com/dmathieu/opentelemetry-ebpf-profiler@collector-recei
 
 ### Run the collector
 
-Note: at the moment, you need `opentelemetry-ebpf-profiler` pulled, and on the
-`otel-receiver` branch for this to run.
+The ebpf-profiler needs to be run as root. So we split building and running.
 
 ```
 cd collector
-go run components.go main.go main_others.go --config ../config.yaml --feature-gates=service.profilesSupport
+go build
+sudo ./profiling-collector --config ../config.yaml --feature-gates=service.profilesSupport
 ```
