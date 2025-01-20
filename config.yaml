@@ -1,5 +1,5 @@
 receivers:
-  otelreceiver:
+  profiling:
     SamplesPerSecond: 100
 
 exporters:
@@ -8,7 +8,7 @@ exporters:
 service:
   pipelines:
     profiles:
-      receivers: [ otelreceiver ]
+      receivers: [ profiling ]
       processors: [ ]
       exporters: [ debug ]
   telemetry:
