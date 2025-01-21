@@ -12,7 +12,7 @@ run:
 
 .PHONY: clean
 clean:
-	rm ocb ocb.stamp
+	@echo Not implemented
 
 .PHONY: ocb
 ocb:
