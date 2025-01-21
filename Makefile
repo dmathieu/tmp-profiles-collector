@@ -5,7 +5,7 @@ collector:
 	./ocb --skip-strict-versioning --verbose --config builder-config.yaml
 
 .PHONY: run
-run:
+run: collector
 	cd collector && \
 	go build && \
 	sudo ./profiling-collector --config ../config.yaml --feature-gates=service.profilesSupport
