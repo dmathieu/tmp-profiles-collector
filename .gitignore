@@ -1,1 +1,6 @@
+.idea/
+collector/builder
+collector/profiling-collector
 ocb
+ocb.stamp
+tmp-profiles-collector.iml

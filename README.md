@@ -4,16 +4,14 @@
 
 **Note**: You shouldn't need to do this, unless you want to retry a full rebuild.
 
-Get the `ocb` tool (OTEL collector builder, amend version):
+Get the `ocb` tool (OTEL collector builder):
 ```
-curl --proto '=https' --tlsv1.2 -fL -o ocb \
-https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/cmd%2Fbuilder%2Fv0.116.0/ocb_0.116.0_linux_amd64
-chmod +x ocb
+make ocb
 ```
 
 Build a static version of the collector with glibc
 ```
-./ocb --skip-strict-versioning --verbose --config builder-config.yaml
+make
 ```
 
 ### Updating the version in `builder-config.yaml`
@@ -29,7 +27,5 @@ go list -m -json github.com/dmathieu/opentelemetry-ebpf-profiler@collector-recei
 The ebpf-profiler needs to be run as root. So we split building and running.
 
 ```
-cd collector
-go build
-sudo ./profiling-collector --config ../config.yaml --feature-gates=service.profilesSupport
+make run
 ```

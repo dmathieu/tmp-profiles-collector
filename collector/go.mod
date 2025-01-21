@@ -4,7 +4,7 @@ module go.opentelemetry.io/collector/cmd/builder
 
 go 1.22.2
 
-toolchain go1.23.4
+toolchain go1.23.5
 
 require (
 	go.opentelemetry.io/collector/component v0.116.0
@@ -136,4 +136,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace go.opentelemetry.io/ebpf-profiler v0.0.1 => /home/parallels/code/src/github.com/open-telemetry/opentelemetry-ebpf-profiler
+replace go.opentelemetry.io/ebpf-profiler v0.0.1 => /home/tim/go/src/github.com/open-telemetry/opentelemetry-ebpf-profiler
