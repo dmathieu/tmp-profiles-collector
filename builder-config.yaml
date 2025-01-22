@@ -5,7 +5,7 @@ dist:
 
 processors:
   - gomod:
-      go.opentelemetry.io/collector-contrib/processor/resourcedetectionprocessor v0.116.0
+      github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.116.0
 
 exporters:
   - gomod:

@@ -2,6 +2,19 @@ receivers:
   profiling:
     SamplesPerSecond: 19
 
+processors:
+  resourcedetection:
+    detectors: [ system ]
+    system:
+      hostname_sources: [ "os" ]
+      resource_attributes:
+        host.id:
+          enabled: true
+        host.name:
+          enabled: true
+        os.type:
+          enabled: true
+
 exporters:
   debug:
 
@@ -9,7 +22,7 @@ service:
   pipelines:
     profiles:
       receivers: [ profiling ]
-      processors: [ ]
+      processors: [ resourcedetection ]
       exporters: [ debug ]
   telemetry:
     logs:
