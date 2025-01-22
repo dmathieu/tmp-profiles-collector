@@ -3,6 +3,10 @@ dist:
   description: Profiling OTel Collector distribution
   output_path: ./collector
 
+processors:
+  - gomod:
+      go.opentelemetry.io/collector-contrib/processor/resourcedetectionprocessor v0.116.0
+
 exporters:
   - gomod:
       go.opentelemetry.io/collector/exporter/debugexporter v0.116.0
