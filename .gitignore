@@ -1,7 +1,6 @@
 .idea/
 builder-config.yaml
-collector/builder
-collector/profiling-collector
+collector/
 ocb
 ocb.stamp
 tmp-profiles-collector.iml
