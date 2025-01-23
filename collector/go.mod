@@ -18,6 +18,7 @@ require (
 	go.opentelemetry.io/collector/connector v0.116.0
 	go.opentelemetry.io/collector/exporter v0.116.0
 	go.opentelemetry.io/collector/exporter/debugexporter v0.116.0
+	go.opentelemetry.io/collector/exporter/otlpexporter v0.116.0
 	go.opentelemetry.io/collector/extension v0.116.0
 	go.opentelemetry.io/collector/otelcol v0.116.0
 	go.opentelemetry.io/collector/processor v0.116.0
@@ -98,6 +99,7 @@ require (
 	github.com/moby/docker-image-spec v1.3.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
+	github.com/mostynb/go-grpc-compression v1.2.3 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/ecsutil v0.116.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/internal/common v0.116.0 // indirect
@@ -132,7 +134,9 @@ require (
 	go.opentelemetry.io/collector/component/componenttest v0.116.0 // indirect
 	go.opentelemetry.io/collector/config/configauth v0.116.0 // indirect
 	go.opentelemetry.io/collector/config/configcompression v1.22.0 // indirect
+	go.opentelemetry.io/collector/config/configgrpc v0.116.0 // indirect
 	go.opentelemetry.io/collector/config/confighttp v0.116.0 // indirect
+	go.opentelemetry.io/collector/config/confignet v1.22.0 // indirect
 	go.opentelemetry.io/collector/config/configopaque v1.22.0 // indirect
 	go.opentelemetry.io/collector/config/configretry v1.22.0 // indirect
 	go.opentelemetry.io/collector/config/configtelemetry v0.116.0 // indirect
@@ -168,6 +172,7 @@ require (
 	go.opentelemetry.io/collector/service v0.116.0 // indirect
 	go.opentelemetry.io/contrib/bridges/otelzap v0.6.0 // indirect
 	go.opentelemetry.io/contrib/config v0.10.0 // indirect
+	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.56.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.56.0 // indirect
 	go.opentelemetry.io/contrib/propagators/b3 v1.31.0 // indirect
 	go.opentelemetry.io/otel v1.32.0 // indirect
