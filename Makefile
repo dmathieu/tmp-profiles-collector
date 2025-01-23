@@ -20,7 +20,7 @@ clean:
 .PHONY: ocb
 ocb:
 	@echo Fetching ocb v$(OCB_VERSION)
-	@curl -s -fL -o ocb \
+	@wget -q -O ocb \
 		https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/cmd%2Fbuilder%2Fv$(OCB_VERSION)/ocb_$(OCB_VERSION)_linux_amd64
 	@chmod +x ocb
 	@./ocb version
