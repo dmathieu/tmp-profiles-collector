@@ -603,6 +603,8 @@ go.opentelemetry.io/collector/featuregate v1.22.0 h1:1TUcdqA5VpEsX1Lrr6GG15CptZx
 go.opentelemetry.io/collector/featuregate v1.22.0/go.mod h1:3GaXqflNDVwWndNGBJ1+XJFy3Fv/XrFgjMN60N3z7yg=
 go.opentelemetry.io/collector/internal/fanoutconsumer v0.116.0 h1:KKFb3u8iLk4V5GYz7eVpw8QgEdob5koX6GNEbaoDQJY=
 go.opentelemetry.io/collector/internal/fanoutconsumer v0.116.0/go.mod h1:YyWHUWeSnRmy2CF7kPHpwJ6qkVjufbLZ8PYuY0Ph0o8=
+go.opentelemetry.io/collector/internal/sharedcomponent v0.116.0 h1:5QhpnwgogQhBrcsOjk1Yhkugopj043XlSDB1lpHKCGo=
+go.opentelemetry.io/collector/internal/sharedcomponent v0.116.0/go.mod h1:wMQM1Sqbj6J6jNVBb5hawkCfmqrLJ0hAeDKkalUfrEY=
 go.opentelemetry.io/collector/otelcol v0.116.0 h1:8NoPEY2uAemwNzUcMxiZuuI8w/Ff+0p1DXXk6NVEGlk=
 go.opentelemetry.io/collector/otelcol v0.116.0/go.mod h1:c/EhsBdHmC44SxhWMi7pTlYB+I6GBSJNBsj9NCwXMxM=
 go.opentelemetry.io/collector/pdata v1.22.0 h1:3yhjL46NLdTMoP8rkkcE9B0pzjf2973crn0KKhX5UrI=
@@ -625,6 +627,8 @@ go.opentelemetry.io/collector/processor/xprocessor v0.116.0 h1:iin/UwuWvSLB7ZNfI
 go.opentelemetry.io/collector/processor/xprocessor v0.116.0/go.mod h1:cnA43/XpKDbaOmd8buqKp/LGJ2l/OoCqbR//u5DMfn8=
 go.opentelemetry.io/collector/receiver v0.116.0 h1:voiBluWLwe4lbyLVwxloK6CudqqszWF+bgYKHuxnETU=
 go.opentelemetry.io/collector/receiver v0.116.0/go.mod h1:zb6m8l+knUuN62ASCDqQPIm9punK8PEX1mFrF/yzMI8=
+go.opentelemetry.io/collector/receiver/otlpreceiver v0.116.0 h1:81u+wJsQp9VfrAdVpVvcV31YAs8qsZp/UnMmG9YCJ0A=
+go.opentelemetry.io/collector/receiver/otlpreceiver v0.116.0/go.mod h1:JXIwjUyh3Q+gNvr7YE937se4/E4UJ/oz5z9xbJeVl3M=
 go.opentelemetry.io/collector/receiver/receivertest v0.116.0 h1:ZF4QVcots0OUiutblkyPR02pc+g7v1QaJSFW8tOzHoQ=
 go.opentelemetry.io/collector/receiver/receivertest v0.116.0/go.mod h1:7GGvtHhW3o6457/wGtSWXJtCtlW6VGFUZSlf6wboNTw=
 go.opentelemetry.io/collector/receiver/xreceiver v0.116.0 h1:Kc+ixqgMjU2sHhzNrFn5TttVNiJlJwTLL3sQrM9uH6s=

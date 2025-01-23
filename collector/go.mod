@@ -23,6 +23,7 @@ require (
 	go.opentelemetry.io/collector/otelcol v0.116.0
 	go.opentelemetry.io/collector/processor v0.116.0
 	go.opentelemetry.io/collector/receiver v0.116.0
+	go.opentelemetry.io/collector/receiver/otlpreceiver v0.116.0
 	go.opentelemetry.io/ebpf-profiler v0.0.1
 	golang.org/x/sys v0.29.0
 )
@@ -129,6 +130,7 @@ require (
 	github.com/x448/float16 v0.8.4 // indirect
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
 	github.com/zeebo/xxh3 v1.0.2 // indirect
+	go.opentelemetry.io/collector v0.116.0 // indirect
 	go.opentelemetry.io/collector/client v1.22.0 // indirect
 	go.opentelemetry.io/collector/component/componentstatus v0.116.0 // indirect
 	go.opentelemetry.io/collector/component/componenttest v0.116.0 // indirect
@@ -158,6 +160,7 @@ require (
 	go.opentelemetry.io/collector/extension/extensiontest v0.116.0 // indirect
 	go.opentelemetry.io/collector/featuregate v1.22.0 // indirect
 	go.opentelemetry.io/collector/internal/fanoutconsumer v0.116.0 // indirect
+	go.opentelemetry.io/collector/internal/sharedcomponent v0.116.0 // indirect
 	go.opentelemetry.io/collector/pdata v1.22.0 // indirect
 	go.opentelemetry.io/collector/pdata/pprofile v0.116.0 // indirect
 	go.opentelemetry.io/collector/pdata/testdata v0.116.0 // indirect
