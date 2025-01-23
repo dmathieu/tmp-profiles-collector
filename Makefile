@@ -1,12 +1,15 @@
 OCB_VERSION=0.116.0
+BUILDER_CONFIG="builder-config.yaml"
 
 .PHONY: collector
 collector:
-	./ocb --skip-strict-versioning --verbose --config builder-config.yaml
+	@printf "# DO NOT EDIT! This file has been auto-generated from \"builder-config.yaml.tmpl\".\n\n" >"$(BUILDER_CONFIG)"
+	@sed 's/$${VERSION}/v$(OCB_VERSION)/g' "$(BUILDER_CONFIG).tmpl" >>"$(BUILDER_CONFIG)"
+	@./ocb --skip-strict-versioning --verbose --config "$(BUILDER_CONFIG)"
 
 .PHONY: run
 run: collector
-	cd collector && \
+	@cd collector && \
 	go build && \
 	sudo ./profiling-collector --config ../config.yaml --feature-gates=service.profilesSupport
 

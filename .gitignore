@@ -1,4 +1,5 @@
 .idea/
+builder-config.yaml
 collector/builder
 collector/profiling-collector
 ocb
