@@ -17,13 +17,17 @@ processors:
 
 exporters:
   debug:
+  otlp:
+    endpoint: localhost:11000
+    tls:
+      insecure: true
 
 service:
   pipelines:
     profiles:
       receivers: [ profiling ]
       processors: [ resourcedetection ]
-      exporters: [ debug ]
+      exporters: [ debug, otlp ]
   telemetry:
     logs:
       level: debug
