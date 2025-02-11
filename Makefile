@@ -1,4 +1,4 @@
-OCB_VERSION=0.118.0
+OCB_VERSION=0.119.1-0.20250210123122-44b3eeda354c
 BUILDER_CONFIG="builder-config.yaml"
 
 .PHONY: collector
@@ -10,7 +10,8 @@ collector:
 .PHONY: run
 run: collector
 	@cd collector && \
-	go build && \
+	go mod tidy && \
+	go build -o profiling-collector && \
 	sudo ./profiling-collector --config ../config.yaml --feature-gates=service.profilesSupport
 
 .PHONY: clean

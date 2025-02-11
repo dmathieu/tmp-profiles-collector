@@ -17,17 +17,18 @@ processors:
 
 exporters:
   debug:
-  otlp:
-    endpoint: localhost:11000
-    tls:
-      insecure: true
+  elasticsearch:
+    endpoint: # REPLACE WITH YOUR ES ENDPOINT
+    api_key: # REPLACE WITH YOUR API
+    mapping:
+      mode: otel
 
 service:
   pipelines:
     profiles:
       receivers: [ profiling ]
       processors: [ resourcedetection ]
-      exporters: [ debug, otlp ]
+      exporters: [ elasticsearch ]
   telemetry:
     logs:
       level: debug

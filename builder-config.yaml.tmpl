@@ -3,15 +3,13 @@ dist:
   description: Profiling OTel Collector distribution
   output_path: ./collector
 
-processors:
-  - gomod:
-      github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor ${VERSION}
-
 exporters:
   - gomod:
       go.opentelemetry.io/collector/exporter/debugexporter ${VERSION}
   - gomod:
       go.opentelemetry.io/collector/exporter/otlpexporter ${VERSION}
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/elasticsearchexporter v0.0.1
+    path: ../../open-telemetry/opentelemetry-collector-contrib/exporter/elasticsearchexporter
 
 receivers:
   - gomod: go.opentelemetry.io/ebpf-profiler v0.0.1
