@@ -17,18 +17,24 @@ processors:
 
 exporters:
   debug:
-  elasticsearch:
-    endpoint: # REPLACE WITH YOUR ES ENDPOINT
-    api_key: # REPLACE WITH YOUR API
-    mapping:
-      mode: otel
+  otlp:
+    endpoint: localhost:4317
+    tls:
+      insecure: true
 
 service:
   pipelines:
     profiles:
       receivers: [ profiling ]
       processors: [ resourcedetection ]
-      exporters: [ elasticsearch ]
+      exporters: [ otlp ]
   telemetry:
     logs:
       level: debug
+    metrics:
+      readers:
+        - pull:
+            exporter:
+              prometheus:
+                host: '0.0.0.0'
+                port: 8889
