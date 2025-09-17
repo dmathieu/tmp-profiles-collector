@@ -1,4 +1,4 @@
-OCB_VERSION=0.120.0
+OCB_VERSION=0.136.0
 BUILDER_CONFIG="builder-config.yaml"
 
 .PHONY: collector

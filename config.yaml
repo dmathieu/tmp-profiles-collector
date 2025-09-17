@@ -1,12 +1,13 @@
+---
 receivers:
   profiling:
     SamplesPerSecond: 19
 
 processors:
   resourcedetection:
-    detectors: [ system ]
+    detectors: [system]
     system:
-      hostname_sources: [ "os" ]
+      hostname_sources: ["os"]
       resource_attributes:
         host.id:
           enabled: true
@@ -18,17 +19,17 @@ processors:
 exporters:
   debug:
   elasticsearch:
-    endpoint: # REPLACE WITH YOUR ES ENDPOINT
-    api_key: # REPLACE WITH YOUR API
+    endpoint:  # REPLACE WITH YOUR ES ENDPOINT
+    api_key:  # REPLACE WITH YOUR API
     mapping:
       mode: otel
 
 service:
   pipelines:
     profiles:
-      receivers: [ profiling ]
-      processors: [ resourcedetection ]
-      exporters: [ elasticsearch ]
+      receivers: [profiling]
+      processors: [resourcedetection]
+      exporters: [elasticsearch]
   telemetry:
     logs:
       level: debug
